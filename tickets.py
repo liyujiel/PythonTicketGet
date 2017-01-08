@@ -33,17 +33,6 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
-from setuptools import setup
-
-setup(
-    name='tickets',
-    py_modules=['tickets', 'stations'],
-    install_requires=['requests', 'docopt', 'prettytable', 'colorama'],
-    entry_points={
-        'console_scripts': ['tickets=tickets:cli']
-    }
-)
-
 def merge_two_dicts(x, y):
     """Given two dicts, merge them into a new dict as a shallow copy."""
     z = x.copy()
